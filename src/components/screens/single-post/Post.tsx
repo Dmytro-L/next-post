@@ -2,12 +2,15 @@ import Layout from "@/components/layout/Layout";
 import { IPostSingleData } from "@/interfaces/post.interface";
 import PostItem from "@/ui/post/PostItem";
 import { FC } from "react";
+import styles from "@/styles/DarkMode.module.scss";
 
 const SinglePost: FC<IPostSingleData> = ({ post }) => {
   return (
-    <Layout>
-      <PostItem post={post} />
-    </Layout>
+    <div className={styles.main}>
+      <Layout>
+        <PostItem post={post} />
+      </Layout>
+    </div>
   );
 };
 export default SinglePost;
