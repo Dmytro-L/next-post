@@ -1,0 +1,12 @@
+.main {
+  background: var(--background-dark);
+  padding: 20px;
+  transition: background 0.2s;
+
+  .about {
+    height: 100vh;
+  }
+}
+.main.darkMode {
+  background: var(--background-light);
+}
