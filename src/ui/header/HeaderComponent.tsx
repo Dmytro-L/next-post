@@ -9,7 +9,7 @@ const HeaderComponent: FC = () => {
   return (
     <div className={styles.navbar}>
       <Link href="/">Home</Link>
-      <Link href="about">About</Link>
+      <Link href="/about" as="/about">About</Link>
       {theme === "light" ? (
         <button onClick={() => setTheme("dark")} suppressHydrationWarning>
           Dark
