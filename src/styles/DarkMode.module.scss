@@ -1,9 +1,23 @@
 .main {
-    background: var(--background-dark);
-    padding: 20px;
-    transition: background .2s;
+  background: var(--background-dark);
+  padding: 20px 20vw;
+  transition: background .2s;
+  position: relative;
+  height: 100%;
 
-    .about {
-      height: 100vh;
+  &.postSingle {
+    min-height: 100vh;
+  }
+
+  .about {
+    min-height: 100vh;
+  }
+    
+    h2,
+    p,
+    a,
+    button {
+      color: var(--color--dark);
     }
 }
+

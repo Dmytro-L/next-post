@@ -1,9 +1,42 @@
 :root {
   --background-dark: rgba(38, 37, 37, 0.622);
   --background-light: rgba(158, 156, 156, 0.622);
+  --color-dark: rgba(255, 231, 231, 0.823);
+  --color-light: rgba(35, 35, 35, 0.823);
+
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
+
+button {
+    background-color: transparent;
+    font-size: 24px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: 2px solid rgba(76, 117, 103, 0.655);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: rgba(76, 117, 103, 0.655);
+    }
+
+    &.active {
+        background-color: rgba(76, 117, 103, 0.655);
+    }
+}
+
+.main {
+    background: var(--background-dark);
+    
+    h2,
+    p,
+    a,
+    button {
+      color: var(--color--dark);
+    }
+}
+
 body {
   margin: 0;
 }
@@ -12,11 +45,20 @@ h2 {
   font-size: 24px;
   margin: 10px 0 20px 0;
   text-align: center;
+  color: var(--color-dark);
+}
+
+p {
+  color: var(--color-dark);
+}
+
+button {
+  color: var(--color-dark);
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--color-dark);
   transition: color 0.3s ease;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;

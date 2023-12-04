@@ -6,7 +6,7 @@ import styles from "@/styles/DarkMode.module.scss";
 
 const SinglePost: FC<IPostSingleData> = ({ post }) => {
   return (
-    <div className={styles.main}>
+    <div className={`${styles.main} ${styles.postSingle}`}>
       <Layout>
         <PostItem post={post} />
       </Layout>

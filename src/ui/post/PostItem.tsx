@@ -3,6 +3,7 @@ import { FC } from "react";
 import Link from "next/link";
 import styles from "./PostItem.module.scss";
 import { useRouter } from "next/router";
+import PostComponent from "./PostComponent";
 
 const PostItem: FC<IPostSingleData> = ({ post }) => {
   const { pathname } = useRouter();
@@ -14,7 +15,10 @@ const PostItem: FC<IPostSingleData> = ({ post }) => {
       {pathname === "/" ? (
         <Link href={`/post/${post.id}`}>Read more</Link>
       ) : (
-        <Link href={`/`}>Back</Link>
+        <>
+          <Link href={`/`}>Back</Link>
+          <PostComponent postId={post.id} />
+        </>
       )}
     </div>
   );
